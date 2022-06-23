@@ -40,19 +40,6 @@ client.on('messageCreate', async message=>{
     }
 
 
-/*PRUEBA DE EMBED
-    if(command==='embed'){
-        const embed = new MessageEmbed()
-        .setColor('GREEN')
-        .setTitle('Embed Title')
-        .setDescription("Descripcion")
-        .setImage("https://cdn.discordapp.com/avatars/733843873352384624/4e7fbff5e5e4e16e5ef30324f1cef4ac.webp?size=1024")
-        .setTimestamp()
-        .setFooter(`Enviado por ${message.author.tag}`)
-    }
-FIN PRUEBA DE EMBED
-*/
-
 });
 
-client.login("NzMzODQzODczMzUyMzg0NjI0.G-uIc8.Rs7doHqS-IocUtvn0sQZjQgsG3tpMVumOM6UmY")
+client.login("Aqui va el token ese")
