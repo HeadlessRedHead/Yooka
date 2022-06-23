@@ -42,4 +42,4 @@ client.on('messageCreate', async message=>{
 
 });
 
-client.login("Aqui va el token ese")
+client.login("Aqui va el token ese- ya no el otro")
