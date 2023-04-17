@@ -3,6 +3,9 @@ const intents= new Discord.Intents();
 const client = new Discord.Client({intents: 131071})
 
 //const {MessageEmbed} = require("discord.js")
+//Nuevo cod porque lol
+const fetch = require ('node-fetch');
+
 
 
 client.on("ready",()=>{
@@ -42,4 +45,9 @@ client.on('messageCreate', async message=>{
 
 });
 
-client.login("Aqui va el token ese- ya no el otro")
+//fetch para mantener viva la peticion
+setInterval(async ()=> {
+    await fetch('https://yooka-bot.glitch.me').then(console.log('Bip'))
+  }, 240000)
+
+client.login(process.env.TOKEN);
