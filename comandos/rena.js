@@ -13,13 +13,15 @@ module.exports = {
         
         var rena = fs.readFileSync('./comandos/media/rena.txt').toString().split("\n");
         var a= Math.floor(Math.random() * 19);  
-
         
+        if (args!=""){
+            a=args;    
+            }
         const msgembed =  new MessageEmbed()
         
         .setColor('GREEN')
         .setThumbnail('https://cdn.discordapp.com/attachments/989500632111153193/989500674544906310/thumnail_rena.jpg')
-        .setTitle('Rena 🗡️')
+        .setTitle('Rena 🗡️- Local' )
         .setDescription('💞Omochikaeri!💞')
         .setImage(rena[a])
         .setTimestamp()
