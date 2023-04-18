@@ -50,5 +50,4 @@ setInterval(async ()=> {
     await fetch('https://yooka-bot.glitch.me').then(console.log('Bip'))
   }, 240000)
 
-//client.login(process.env.TOKEN);
-client.login('NzMzODQzODczMzUyMzg0NjI0.GNs47o.SYwRNTeowE_v8j3ErJDDdpqsE2HWzR8ru9f6Nc');
+client.login(process.env.TOKEN);
