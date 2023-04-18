@@ -86,6 +86,7 @@ module.exports = {
                   
                   .setDescription(`Desde Anilist\n**Descripción:**\n\`\`\`${media.description.replace(/<[^>]*>/g, '')}\`\`\``)
                   .setImage('attachment://cover.jpg')
+                  .setFooter(`Enviado para ${message.author.tag}`)
                   .addFields(
                     
                     { name: 'Fecha de inicio:', value: `${media.startDate.year}-${media.startDate.month}-${media.startDate.day}`||'Desconocido', inline:true },

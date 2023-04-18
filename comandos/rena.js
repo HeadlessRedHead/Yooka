@@ -25,7 +25,7 @@ module.exports = {
         .setDescription('💞Omochikaeri!💞')
         .setImage(rena[a])
         .setTimestamp()
-        .setFooter(`Enviado por ${message.author.tag}`)
+        .setFooter(`Enviado para ${message.author.tag}`)
 
         message.channel.send({embeds: [msgembed]})
 

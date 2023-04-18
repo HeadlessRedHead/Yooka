@@ -14,7 +14,7 @@ module.exports = {
         .setDescription(`💥 Que pingeai flaco || ${client.ws.ping}ms`)
         .setImage("https://cdn.discordapp.com/avatars/733843873352384624/4e7fbff5e5e4e16e5ef30324f1cef4ac.webp?size=1024")
         .setTimestamp()
-        .setFooter(`Enviado por ${message.author.tag}`)
+        .setFooter(`Enviado para ${message.author.tag}`)
 
         message.channel.send({embeds: [msgembed]})
 

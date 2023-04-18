@@ -16,7 +16,7 @@ module.exports = {
             'wen day is dark alway rember happy day')
         .setImage("https://cdn.discordapp.com/avatars/733843873352384624/4e7fbff5e5e4e16e5ef30324f1cef4ac.webp?size=1024")
         .setTimestamp()
-        .setFooter(`Enviado por ${message.author.tag}`)
+        .setFooter(`Enviado para ${message.author.tag}`)
 
         message.channel.send({embeds: [msgembed]})
 
