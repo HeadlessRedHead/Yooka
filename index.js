@@ -4,7 +4,7 @@ const client = new Discord.Client({intents: 131071})
 
 //const {MessageEmbed} = require("discord.js")
 //Nuevo cod porque lol
-const fetch = require ('node-fetch');
+const fetch = require ('node-fetch2');
 
 
 
