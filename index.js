@@ -8,6 +8,8 @@ const fetch = require ('node-fetch2');
 
 
 
+
+
 client.on("ready",()=>{
   console.log("Happi Dei!")  ;
 })
@@ -47,7 +49,27 @@ client.on('messageCreate', async message=>{
 
 //fetch para mantener viva la peticion
 setInterval(async ()=> {
-    await fetch('https://yooka-bot.glitch.me').then(console.log('Bip'))
+    
+    await fetch('https://yooka-discord.glitch.me').then(console.log('Bip'))
+    
   }, 240000)
 
+
+
 client.login(process.env.TOKEN);
+
+
+var cont=0;
+
+setInterval(() => {
+    var d = new Date().toLocaleString('en-US', {timeZone: 'America/Guayaquil'});
+    cont=cont+1;
+    const canal = client.channels.cache.get(`1097118619806212207`); // Cambia "ID del canal" por el ID del canal donde quieres enviar el mensaje
+    canal.send('Poi '+cont+" veces || "+ d); // Cambia "Mensaje automático cada 4 minutos" por el mensaje que quieres enviar
+}, 240000);
+
+setInterval(async ()=> {
+    
+    await fetch('https://seen-acoustic-satellite.glitch.me').then(console.log('Bopin'))
+    
+  }, 42840000)

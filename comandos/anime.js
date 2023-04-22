@@ -88,7 +88,8 @@ module.exports = {
                   .setImage('attachment://cover.jpg')
                   .setFooter(`Enviado para ${message.author.tag}`)
                   .addFields(
-                    
+
+                    { name: 'Nombres: ', value: `${media.title.english}\n${media.title.romaji}\n${media.title.native}`||'Desconocido', inline: true },
                     { name: 'Fecha de inicio:', value: `${media.startDate.year}-${media.startDate.month}-${media.startDate.day}`||'Desconocido', inline:true },
                     { name: 'Fecha de fin:', value: `${media.endDate.year}-${media.endDate.month}-${media.endDate.day}`||'Desconocido',inline:true },
                     { name: 'Episodios:', value: `${media.episodes}`||'Desconocido', inline: true },
