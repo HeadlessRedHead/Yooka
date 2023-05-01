@@ -4,8 +4,8 @@ const fs = require('fs');
 const fetch = require ('node-fetch2');
 
 module.exports = {
-    name:"anime",
-    alias: ["ani"],
+    name:"manga",
+    alias: ["manga"],
     async execute(client,message,args){
         var texto="";
         var nombre="";
@@ -13,7 +13,7 @@ module.exports = {
             
         const msgembed =  new MessageEmbed()
         
-        .setColor('GREEN')
+        .setColor('RED')
         
         .setTitle('Anilist - Error')
         .setDescription("Envia un nombre po wn")
@@ -32,7 +32,7 @@ module.exports = {
                   body: JSON.stringify({
                     query: `
                       query ($search: String) {
-                        Media(search: $search, type: ANIME) {
+                        Media(search: $search, type: MANGA) {
                           id
                           title {
                             romaji
@@ -42,7 +42,8 @@ module.exports = {
                           description
                           popularity
                           status
-                          episodes
+                          volumes
+                          chapters
                           startDate {
                             year
                             month
@@ -82,10 +83,10 @@ module.exports = {
                 const coverBuffer = await coverResponse.buffer();
 
                 const msgembed =  new MessageEmbed()
-                  .setColor('GREEN')
+                  .setColor('RED')
                   .setThumbnail('https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/AniList_logo.svg/240px-AniList_logo.svg.png')
-                  .setTitle((media.title.english || media.title.romaji || media.title.native)+"\t📺")
-                  .setURL(`https://anilist.co/anime/${media.id}`)
+                  .setTitle((media.title.english || media.title.romaji || media.title.native)+"\t📕")
+                  .setURL(`https://anilist.co/manga/${media.id}`)
                   
                   .setDescription(`Desde Anilist\n**Descripción:**\n\`\`\`${media.description.replace(/<[^>]*>/g, '')}\`\`\``)
                   .setImage('attachment://cover.jpg')
@@ -96,7 +97,8 @@ module.exports = {
                     { name: 'Nombres:', value: `${names}`, inline: true },
                     { name: 'Fecha de inicio:', value: `${media.startDate.year}-${media.startDate.month}-${media.startDate.day}`||'Desconocido', inline:true },
                     { name: 'Fecha de fin:', value: `${media.endDate.year}-${media.endDate.month}-${media.endDate.day}`||'Desconocido',inline:true },
-                    { name: 'Episodios:', value: `${media.episodes}`||'Desconocido', inline: true },
+                    { name: 'Capitulos:', value: `${media.chapters}`||'Desconocido', inline: true },
+                    { name: 'Volúmenes:', value: `${media.volumes}`||'Desconocido', inline: true },
                     { name: 'Popularidad:', value: `${media.popularity}`||'Desconocido', inline: true },
                     { name: 'Estado:', value: media.status ||'Desconocido', inline: true },
                     { name: 'Género', value: media.genres.join(', ') ||'Desconocido', inline: true },
